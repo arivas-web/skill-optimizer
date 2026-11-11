@@ -1,19 +1,19 @@
 ---
 name: noticias-linkedin-visualtrans
-description: Briefing diario de noticias del sector aduanero, transitario, logístico y marítimo para publicar en LinkedIn desde Visual Trans. Busca lo publicado en las últimas 24-48 h, filtra y devuelve en el chat las 3 noticias más publicables con su ángulo para LinkedIn. Usa esta skill siempre que el usuario pida las noticias del día, el briefing, "noticias para LinkedIn", "noticias del sector", "qué publico hoy", o cuando una tarea programada la invoque por su nombre, aunque no diga "skill".
+description: Briefing semanal de noticias del sector aduanero, transitario, logístico y marítimo para publicar en LinkedIn desde Visual Trans. Busca lo publicado en los últimos 7 días, filtra y devuelve en el chat las 5 noticias más publicables de la semana con su ángulo para LinkedIn. Usa esta skill siempre que el usuario pida las noticias de la semana, las noticias del día, el briefing, "noticias para LinkedIn", "noticias del sector", "qué publico esta semana", o cuando una tarea programada la invoque por su nombre, aunque no diga "skill".
 ---
 
-# Noticias diarias para LinkedIn · Visual Trans
+# Noticias semanales para LinkedIn · Visual Trans
 
-Objetivo: que Adrián (marketing de Visual Trans) sepa en 2 minutos qué noticia del sector merece un post hoy. Es una **selección para publicar**, no una revista de prensa. Respuesta en el chat, en español.
+Objetivo: que Adrián (marketing de Visual Trans) sepa en 3 minutos qué ha pasado en el sector esta semana y qué merece un post en LinkedIn los próximos días. Es una **selección para publicar**, no una revista de prensa. Respuesta en el chat, en español.
 
 ## Reglas fijas (léelas antes de empezar)
 
-1. **Máx. 8 búsquedas** y **máx. 4 artículos abiertos**. Cuenta cada llamada. Al llegar al límite, para y redacta con lo que tengas.
-2. **Respuesta de máx. 350 palabras.**
+1. **Máx. 10 búsquedas** y **máx. 5 artículos abiertos**. Cuenta cada llamada. Al llegar al límite, para y redacta con lo que tengas.
+2. **Respuesta de máx. 500 palabras.**
 3. **Nunca inventes** un enlace, una fecha, un medio ni un dato. Copia el enlace exactamente como aparece en el resultado de búsqueda. Si no tienes fecha confirmada, descarta la noticia.
 4. **Parafrasea siempre.** Como mucho una cita literal de menos de 15 palabras por fuente.
-5. Mejor 2 noticias buenas que 5 flojas. Nunca rellenes.
+5. Mejor 3 noticias buenas que 5 flojas. Nunca rellenes.
 
 ## Contexto: a quién le escribe Visual Trans (ICP)
 
@@ -24,23 +24,23 @@ Objetivo: que Adrián (marketing de Visual Trans) sepa en 2 minutos qué noticia
 ## Proceso
 
 ### Paso 1 · Fecha y ventana
-- Usa la fecha de hoy del contexto (o ejecuta `date` si no la tienes). Escríbela: día de la semana + fecha.
-- Ventana = **últimas 24 h**. Si hoy es **lunes**, ventana = desde el **viernes por la mañana**.
+- Usa la fecha de hoy del contexto (o ejecuta `date` si no la tienes).
+- Ventana = **últimos 7 días** (de hoy hacia atrás). Escribe las dos fechas del rango: "del [fecha inicio] al [fecha hoy]".
 
-### Paso 2 · Búsquedas (máx. 8)
-Usa la búsqueda web en modo estándar. Haz las 4 primeras en este orden; añade "hoy" o el mes y año actuales a cada consulta:
+### Paso 2 · Búsquedas (máx. 10)
+Usa la búsqueda web en modo estándar. Haz las 4 primeras en este orden; añade "esta semana" o el mes y año actuales a cada consulta:
 
 1. `noticias aduanas España`
 2. `transitarios logística noticias`
 3. `transporte marítimo puertos España noticias`
 4. `Unión Europea aduanas normativa` (reforma aduanera, ICS2, CBAM, aranceles, DUA, AEAT)
 
-Con las 4 restantes, como mucho:
+Con las 6 restantes, como mucho:
 - Profundiza en el tema más fuerte que haya salido (otra fuente, la fecha exacta, la reacción del sector).
 - O cubre un hueco: tecnología/IA en logística, empresas del sector, huelgas o congestión en puertos españoles, fletes.
 - No repitas una consulta con sinónimos.
 
-**Para en cuanto tengas 3 candidatas fuertes**, aunque no hayas gastado las 8.
+**Para en cuanto tengas 5 candidatas fuertes**, aunque no hayas gastado las 10.
 
 Fuentes habituales útiles (no obligatorias): Diario del Puerto, Cadena de Suministro, Logística Profesional, El Mercantil, Transporte XXI, Veintepies, AEAT, Comisión Europea.
 
@@ -51,8 +51,9 @@ Decide solo con titular y resumen. Descarta:
 - Otros países sin efecto en España/UE.
 - Notas de prensa autopromocionales sin interés para el ICP.
 - Duplicados: de varios medios con la misma noticia, quédate con el más completo.
+- Noticias que se han quedado viejas dentro de la semana: si un tema evolucionó, quédate con la versión más reciente.
 
-### Paso 4 · Abre solo finalistas (máx. 4)
+### Paso 4 · Abre solo finalistas (máx. 5)
 Abre un artículo **solo** si el resumen no deja clara la fecha o el contenido. Lee el titular, la entradilla y los primeros párrafos; no hace falta más.
 
 ### Paso 5 · Puntúa (interno, no lo muestres)
@@ -61,12 +62,12 @@ Da 0, 1 o 2 puntos en cada criterio (máx. 8):
 | Criterio | 2 puntos si… |
 |---|---|
 | Impacto en el ICP | Cambia el trabajo diario de un transitario, agente, operador o consignatario. |
-| Actualidad | Es de hoy/ayer o un plazo que entra en vigor ya. |
+| Actualidad | Es de esta semana y sigue vigente, o un plazo que entra en vigor en los próximos días. |
 | Encaje con Visual Trans | Conecta con papeleo, documentos, trámites aduaneros, atención al cliente o digitalización. |
 | Conversación | Tiene un dato llamativo, polémica o una voz relevante del sector. |
 
 - Publica las de **5 puntos o más**, ordenadas de mayor a menor.
-- 3 por defecto; 4-5 solo si empatan en puntuación alta.
+- 5 por defecto; menos si no hay 5 que lleguen a 5 puntos.
 - Si ninguna llega a 5: usa la salida "sin noticias" (abajo).
 
 ### Paso 6 · Radar de competencia
@@ -77,7 +78,7 @@ Si algún resultado menciona a un proveedor de software del sector (p. ej. Bytem
 Copia esta plantilla exacta. Sustituye lo que va entre corchetes.
 
 ```
-📰 Briefing del [día de la semana] [fecha] · [N] noticias revisadas
+📰 Briefing semanal · del [fecha inicio] al [fecha hoy] · [N] noticias revisadas
 
 ---
 
@@ -94,8 +95,8 @@ Copia esta plantilla exacta. Sustituye lo que va entre corchetes.
 
 ---
 
-### ✅ Recomendación del día
-[Cuál publicar primero y por qué, en 1-2 frases]
+### ✅ Plan de publicación de la semana
+[Orden sugerido para publicarlas (p. ej. lunes: n.º 1, miércoles: n.º 3, viernes: n.º 2) y por qué la primera, en 2-3 frases]
 
 ### 🔍 Radar de competencia
 [Solo si hay menciones a competidores; si no, borra esta sección entera]
@@ -104,7 +105,7 @@ Copia esta plantilla exacta. Sustituye lo que va entre corchetes.
 - `[N] noticias revisadas` = número de resultados distintos que has valorado.
 - Elige **un solo** tipo de ángulo por noticia.
 
-**Salida "sin noticias":** una línea diciendo que hoy nada supera el filtro + un tema evergreen del sector como alternativa (p. ej. errores frecuentes en el DUA, cómo la IA reduce el tecleo de documentos).
+**Salida "sin noticias":** una línea diciendo que esta semana nada supera el filtro + un tema evergreen del sector como alternativa (p. ej. errores frecuentes en el DUA, cómo la IA reduce el tecleo de documentos).
 
 ### Ejemplo de formato (noticia ficticia: no la uses ni la cites)
 
@@ -121,7 +122,7 @@ Copia esta plantilla exacta. Sustituye lo que va entre corchetes.
 
 - [ ] Cada noticia tiene medio, fecha dentro de la ventana y enlace copiado del resultado.
 - [ ] Nada copiado literalmente salvo, como mucho, una cita corta.
-- [ ] Máx. 350 palabras. Sin introducción ni despedida fuera de la plantilla.
+- [ ] Máx. 500 palabras. Sin introducción ni despedida fuera de la plantilla.
 - [ ] Radar de competencia borrado si está vacío.
 
 ## Después
